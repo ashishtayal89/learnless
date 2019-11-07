@@ -5,10 +5,11 @@
 - [CSS Issues](#cssissues)
 - [LESS](#less)
 
-  - [Variables in less](#variablesinless)
-  - [Mixins in less](#mixinsinless)
-  - [Nested Rules in less](#nestedrulesinless)
-  - [Namespace/Scoping in less](#namespaceinless)
+  - [Introduction](#lessintroduction)
+  - [Variables](#variablesinless)
+  - [Mixins](#mixinsinless)
+  - [Nested Rules](#nestedrulesinless)
+  - [Namespace/Scoping](#namespaceinless)
 
 - [SASS](#sass)
 
@@ -73,3 +74,35 @@
   ```
 
 - **Importing Problem** : In simple css we don't have a mechanism to add the rules specified in 1 css file into another css file. LESS provides us with a mechanism were we can segrigate our changes in different less files and them compile them into one file before serving to the server using the **@import** keyword.
+
+## LESS
+
+<div id="lessintroduction"/>
+
+### Introduction
+
+- Its a css pre-precessor.
+- Introduces programming features to css. Less compiles to css.
+- Code Example
+
+  - Add the less file in your html as below.
+  - Add the less.min.js in your html as below. Its the role of this js file to compile the less files into css files. Notice we have provided the **rel="stylesheet/less"** for the less files. This is important because the less.min.js would only compile the files with this rel tag. The browser would ignore the processing of these files since it doesn't know what rel="stylesheet/less" means.
+  - Also less is going to ignore the css/less files which are not in your domain ie the thrid party css and less files.
+  - Flow :
+    1. Html parsing starts.
+    2. Parser comes to line `<link rel="stylesheet/less" href="css/init.less" />`. It skips this line since it is not aware about rel="stylesheet/less".
+    3. It moves forward and reaches line `<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>`. It loads this script file.
+    4. As soon as this file is loaded it looks for all the link tags with rel="stylesheet/less" and loads the resources. It compiles them and adds them to a style tag in the head section.
+
+  ```html
+  <html>
+    <head>
+      <link rel="stylesheet/less" href="css/init.less" />
+    </head>
+    <body>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+    </body>
+  </html>
+  ```
+
+> Note : All css files are also valid less so we can also have <link rel="stylesheet/less" href="css/init.css" />
