@@ -1,0 +1,25 @@
+{
+  "name": "learnless",
+  "version": "1.0.0",
+  "description": "Less Basics",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ashishtayal89@github.com/ashishtayal89/learnless.git.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashishtayal89/learnless.git/issues"
+  },
+  "homepage": "https://github.com/ashishtayal89/learnless.git#readme"
+}

@@ -1,0 +1,51 @@
+@import "./const.less";
+@import "./mixins.less";
+@import "./table.less";
+
+body {
+  background: @main-color;
+  font-size: 20px;
+}
+
+.container {
+  min-height: 50px;
+}
+
+#div1 {
+  h1 {
+    .rounded-corners(@default-radius);
+    font-size: 2rem;
+    background: darken(@main-color, 10%);
+  }
+}
+
+#div2 {
+  h1 {
+    .rounded-corners;
+    font-size: 1.7rem;
+  }
+}
+
+#div3 {
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+
+#div4 {
+  h1 {
+    font-size: 1.1rem;
+  }
+}
+
+#div5 {
+  h1 {
+    font-size: 0.9rem;
+  }
+}
+
+#div6 {
+  h1 {
+    font-size: 0.7rem;
+  }
+}
