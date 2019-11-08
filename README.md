@@ -106,7 +106,7 @@
     </html>
     ```
 
-    > Note : All css files are also valid less so we can also have <link rel="stylesheet/   less" href="css/init.css" />
+    > Note : All css files are also valid less so we can also have `<link rel="stylesheet/less" href="css/init.css" />`
 
 <div id="variablesinless"/>
 
