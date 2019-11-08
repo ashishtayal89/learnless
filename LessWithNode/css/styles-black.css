@@ -25,7 +25,8 @@
   background: url("/IMAGES/background.jpg");
 }
 body {
-  background: Pink;
+  background: black;
+  color: white;
   font-size: 20px;
 }
 .container {
@@ -36,7 +37,7 @@ body {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   font-size: 2rem;
-  background: #ff8da1;
+  background: #e6e6e6;
 }
 #div2 h1 {
   border-radius: 10px;

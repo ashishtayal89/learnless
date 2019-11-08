@@ -1,0 +1,59 @@
+.table tr:nth-child(2n + 1) {
+  background: grey;
+}
+.table tr:nth-child(2n) {
+  background: white;
+}
+.table__row {
+  font-size: 2rem;
+}
+#my-forms .set-button {
+  font-size: 14px;
+  text-align: center;
+}
+#submit-button {
+  font-size: 14px;
+  text-align: center;
+}
+#submit-button > .set-button {
+  font-size: 16px;
+}
+#form .button {
+  font-size: 18px;
+}
+#form {
+  background: url("/IMAGES/background.jpg");
+}
+body {
+  background: white;
+  color: black;
+  font-size: 20px;
+}
+.container {
+  min-height: 50px;
+}
+#div1 h1 {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  font-size: 2rem;
+  background: #000000;
+}
+#div2 h1 {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  font-size: 1.7rem;
+}
+#div3 h1 {
+  font-size: 1.4rem;
+}
+#div4 h1 {
+  font-size: 1.1rem;
+}
+#div5 h1 {
+  font-size: 0.9rem;
+}
+#div6 h1 {
+  font-size: 0.7rem;
+}

@@ -1,0 +1,9 @@
+.app-theme(@base) when (@base = black) {
+  @import "./init-black.less";
+}
+
+.app-theme(@base) when (@base = white) {
+  @import "./init-white.less";
+}
+
+.app-theme(@apps-theme);

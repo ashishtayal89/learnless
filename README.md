@@ -10,6 +10,7 @@
   - [Mixins](#mixinsinless)
   - [Nested Rules](#nestedrulesinless)
   - [Namespace/Scoping](#namespaceinless)
+  - [Project](#projectinless)
 
 - [SASS](#sass)
 
@@ -472,3 +473,8 @@
     background: url("/IMAGES/background.jpg");
   }
   ```
+
+### Project
+
+- Using Browser : `npm run less:browser`
+- Using Node : `npm run less:node`

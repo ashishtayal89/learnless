@@ -12,9 +12,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "less:browser": "live-server --open=/lesswithbrowser",
-    "less:node": "npm-run-all build:less serve:node -s",
+    "less:node": "npm-run-all build:theme serve:node -s",
     "serve:node": "live-server --open=/lesswithnode",
-    "build:less": "lessc ./lesswithnode/less/init.less ./lesswithnode/css/styles.css --js"
+    "build:theme": "npm-run-all build:theme:white build:theme:black",
+    "build:theme:white": "lessc ./lesswithnode/less/init.less ./lesswithnode/css/styles-white.css --global-var=apps-theme=\"white\" --js",
+    "build:theme:black": "lessc ./lesswithnode/less/init.less ./lesswithnode/css/styles-black.css --global-var=apps-theme=\"black\" --js"
   },
   "repository": {
     "type": "git",
