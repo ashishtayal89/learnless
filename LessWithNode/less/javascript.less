@@ -1,0 +1,6 @@
+@root: "/images/";
+@app-root: ` @{root} .toUpperCase() `; // Wraped the javascript expression inside `` operators.
+
+#form {
+  background: url("@{app-root}background.jpg");
+}

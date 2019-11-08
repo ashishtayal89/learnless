@@ -113,12 +113,12 @@
 ### Variables, Operations and Functions
 
 - Variables in less are constants with a specific value. Eg `@myColor: #ffeedd`. You can't update the value of a variable in less. So you can't do `@myColor: @myColor + 5%`.
-- Thinks that can be assigned to a variable are :
+- Values that can be assigned to a variable are :
   1. Colors : `@a: Black;`
   2. Units(All units in css can be stored in a variable) : `@b: 4px;`, `@c: 1.0em;`
   3. Strings : `@d: Helvectica, sans serif;`
   4. Complex Types : `@e: 1px #000 Solid 0 0;`
-- Operations : You can use operators to compute a value that needs to be assigned to a varible or a property direcly.
+- Operations : You can use operators to compute a value that needs to be assigned to a varible or a property directly.
 
   ```less
   // Operations
