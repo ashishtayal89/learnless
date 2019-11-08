@@ -402,4 +402,73 @@
 
 <div id="namespaceinless"/>
 
-### Namespace/Scoping
+### Namespace and Scoping
+
+- Namespace is done for organizational grouping of css rules. As you can see in the below example we have created a namespace my-forms and added some rule for styling a button. Now we can use the same rules just by providing the required namespace for the rules ie. `#my-forms > .set-button;`.
+
+  ```less
+  #my-forms {
+    .set-button {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  #submit-button {
+    #my-forms > .set-button; // > symbol says to find the rules inside set-button class which is inside my-forms id.
+    > .set-button {
+      font-size: 16px;
+    }
+  }
+  ```
+
+- Scoping is a mechinism to define the scope of variables and mixins. In the below example we define the variable @size in 2 scope. In the global scope and in the scope of #form. Namespace declares a new scope.
+
+  ```less
+  // Scoping
+  @size: 24px;
+  #form {
+    @size: 18px;
+    .button {
+      font-size: @size; // 18px;
+    }
+  }
+  ```
+
+- String Interpolation is also there is less.
+
+  ```less
+  // Less
+  @root: "/images/";
+
+  #form {
+    background: url("@{root}background.jpg");
+  }
+  ```
+
+  ```less
+  // Css
+  #form {
+    background: url("/images/background.jpg");
+  }
+  ```
+
+- Using Javascript : We can also use javascript in css. To do this we need to wrap the expression we want to execute in backtick operators. Look at the below example.
+
+  ```less
+  // Less
+  @root: "/images/";
+  @app-root: ` @{root} .toUpperCase() `; // Wraped the javascript expression inside `` operators.
+
+  #form {
+    background: url("@{app-root}background.jpg");
+  }
+  ```
+
+  ```less
+  // Css
+
+  #form {
+    background: url("/IMAGES/background.jpg");
+  }
+  ```

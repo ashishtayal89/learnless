@@ -1,0 +1,23 @@
+// Namespace
+#my-forms {
+  .set-button {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+#submit-button {
+  #my-forms > .set-button; // This helps to access the set-button class inside the my-forms namespace;
+  > .set-button {
+    font-size: 16px;
+  }
+}
+
+// Scoping
+@size: 24px;
+#form {
+  @size: 18px;
+  .button {
+    font-size: @size; // 18px;
+  }
+}
